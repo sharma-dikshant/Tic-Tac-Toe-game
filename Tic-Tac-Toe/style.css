@@ -1,0 +1,134 @@
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting a smooth font for the whole page */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #FCF5ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Styling the main container */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Styling the game container */
+.container {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    background-color: #CE5A67;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 90vw;
+    max-width: 500px;
+    height: 90vh;
+    max-height: 700px;
+}
+
+/* Styling the heading */
+.container h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #FCF5ED;
+}
+
+/* Styling the winner message */
+.winner-msg {
+    padding: 10px;
+    font-size: 1.6rem;
+    color: #FCF5ED;
+    height: 1.8rem;
+    margin-bottom: 20px;
+    visibility: hidden; /* Hide the message without affecting the layout */
+}
+
+.winner-msg.show {
+    visibility: visible; /* Show the message without affecting the layout */
+}
+
+.hide {
+    display: none;
+}
+
+/* Styling the game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* Styling each box in the game board */
+.box {
+    color: #1F1717;
+    background-color: #fff;
+    font-size: 4rem;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    user-select: none;
+}
+
+.box:hover {
+    background-color: #1F1717;
+    color: #FCF5ED;
+}
+
+/* Styling the new game button */
+#new-game {
+    background-color: #1F1717;
+    color: #FCF5ED;
+    font-size: 1.4rem;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#new-game:hover {
+    color: black;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Making the game responsive */
+@media (max-width: 500px) {
+    .container {
+        padding: 10px;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .box {
+        font-size: 3rem;
+    }
+
+    #new-game {
+        font-size: 1.2rem;
+    }
+}
